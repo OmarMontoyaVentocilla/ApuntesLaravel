@@ -1,0 +1,92 @@
+php artisan serve //inicias el servidor de laravel en el puerto 8000
+ 
+php artisan make:auth //crea una autentificacion
+
+php artisan make:controller MainController //hacer un controlador vacio
+-----------------------------------------------
+ya que el package.json contiene mis dependencias
+para poner sasss
+ ejecuto npm install en mi caprta de proyecto
+nos va a crear una carpeta node_modules
+de ahi instalo: npm install -g gulp
+
+de ahi gulp watch 
+------------------------------------------------
+
+php artisan make:migration create_products_table  //crea ell archivo migracion para crear la tabla y ojo el nombre de la tabla es plural*
+php artisan make:migration create_books_table --create=books //nos crea ya el metodo up y down  de la migracion
+
+php artisan migrate  //al ejecutar se creo la tabla en la base de datos
+
+php artisan migrate:rollback //desaparece la tabla q he creado
+
+php artisan migrate:refresh //al migrar nuestras tablas los campos nuevos que agregamos con este comando se hacen rollback general,pero los
+datos q teniamos se borran 
+
+php artisan migrate:reset //resetea la bd solo deja la tabla migrations
+
+php artisan make:migration add_pag_to_books_table --table=books //eso genera un archivo de migracion de la tabla en gestion para luego actuaizarla.
+($table->integer('pags')->unsigned()->after('name'))  
+
+php artisan make:controller MainController --resource //crea el controlador con los metodos establecidos
+
+php artisan make:model //crea un modelo
+
+php artisan make:model  Task -m -c -r //crea el modelo con su migracion y su controlador restful.
+
+composer update //esto es cuando en el package.json agregamos una nueva dependencia hay q ejecutar este comando
+
+y de ahi nos vamos a config/app.php y en providers ponemos...
+
+php artisan make:provider ShoppingCartProvider //agrega un provider
+
+php artisan vendor:publish //esto es para que en el config se aparezca el archivo osea una copia de la dependencia de la libreria
+
+
+php artisan tinker //habre el powershield de laravel que podemos usar todo de php tbn 
+
+
+php artisan down // poner la aplicacion en modo de mantenimiento
+
+php artisan up //levanta la aplicacion del modo de mantenimiento
+omarven@hotmail.com
+
+omarbuyer@hotmail.com
+
+cuando hacemos tinker ponemos esto
+factory(App\Post::class)->make()
+factory(App\Post::class,10)->create()  //agrega informacion falsa respetando el tipo de dato
+
+//librea cache y lo limpia
+php artisan config:cache
+php artisan config:clear
+
+//esto es para validar
+php artisan make:request BookRequest
+
+
+//PARA INSTALAR SNAPPY PDF
+
+tenemos que ir a https://wkhtmltopdf.org/downloads.html y descargar dependiendo la version que tengamos
+y luego ejecutar composer require barryvdh/laravel-snappy
+agregar los provider y alias
+'binary'  => '"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf"',  esto es en config app
+
+	
+
+php artisan list //lista todos los comandos de artisan
+
+php artisan make:middleware Nombre //crea un  middleware q es como una puerta q tiene q pasar una peticion 
+
+
+npm run dev //esto es en laravel webpack ....para q construya
+
+
+
+
+
+
+
+
+
+
